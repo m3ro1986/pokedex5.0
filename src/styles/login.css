@@ -1,0 +1,163 @@
+.loginBox {
+    height: 100vh;
+    display: flex;
+    background-image: url('../assets/forest.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(15px);
+}
+
+.loginBox-login {
+    width: 20rem;
+    height: 30rem;
+    background-color: red;
+    border-width: 3px;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: black;
+    margin: auto;
+    box-shadow: inset 5px 5px 5px #C3292A;
+    
+}
+
+.shineLigth {
+    height: 15%;
+    display: flex;
+    border-style: none none groove none;
+    border-color: red;
+    border-width: 10px;
+}
+
+.shineLigth-big {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #07D1DA;
+    border-radius: 50%;
+    border-width: 2px;
+    border-color: black;
+    border-style: double;
+    box-shadow: inset 3px 3px 10px #036C80;
+    margin: 1rem;
+}
+
+.shineLigth-big:hover {
+    /* box-shadow: 5px 5px 25px white; */
+    box-shadow: inset 5px 0px 10px white;
+    border-color: transparent;
+}
+
+
+.shineligth-small {
+    padding-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.shineligth-small span{
+    display: flex;
+    width: 1rem;
+    height: 1rem;
+    /* background-color: rgb(201, 201, 201); */
+    border-radius: 50%;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.shineligth-small span:nth-child(1) {
+    background-color: red;
+    box-shadow: inset 1px 1px 5px black;
+}
+
+.shineligth-small span:nth-child(2) {
+    background-color: yellow;
+    box-shadow: inset 1px 1px 5px black;
+}
+
+.shineligth-small span:nth-child(3) {
+    background-color: green;
+    box-shadow: inset 1px 1px 5px black;
+}
+
+.loginBox-main {
+    height: 72%;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border-style: solid;
+    border-width: 4px;
+    border-color: black;
+}
+
+.loginBox-main_welcome {
+    height: 60%;
+    background-color: #BCBCBC;
+    border-radius: 1rem 1rem 1rem 3rem;
+    border-style: solid;
+    border-color: black;
+}
+
+.ligth-small {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.2rem;
+}
+
+.ligth-small div{
+    display: flex;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    background-color: red;
+    box-shadow: inset 1px 1px 5px black;
+}
+
+.loginBox-main_message {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 80%;
+    margin: 0.2rem;
+    border-radius: 0.5rem 0.5rem 0.5rem 2rem;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+}
+
+.loginBox-main_message input {
+    margin-top: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+    height: 2rem;
+    background-color: yellow;
+    border-color: black;
+    border-radius: 1rem;
+    
+}
+
+.bx {
+    font-size: 3.5rem;
+    color: aliceblue;
+}
+
+.button-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem ;
+}
+
+.button-box button{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    border-width: 5px;
+    font-size: 1.5rem;
+}
