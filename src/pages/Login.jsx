@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllPokemonsThunk } from '../store/slices/allPokemons';
 import { setLoading } from '../store/slices/loading';
+import { getUserName } from '../store/slices/userName';
 
 const Login = () => {
 
@@ -15,10 +16,15 @@ const Login = () => {
     const loading = useSelector( state => state.loading );
 
     const goPokemons = () => {
+        if ( theName !== ''){
+        dispatch(getUserName(theName))
         dispatch(setLoading('loading'))
         setTimeout( () => dispatch( getAllPokemonsThunk() ),1000);
         setTimeout( () => setScale( 'scale'), 1000);
         setTimeout( () => navigate('/pokedex'), 2000 ) ;
+        } else {
+            alert('give me a name')
+        }
     }
 
     return (
