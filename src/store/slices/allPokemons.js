@@ -15,7 +15,7 @@ export const allPokemonsSlice = createSlice({
 })
 
 export const getAllPokemonsThunk = () => dispatch => {
-    axios.get('https://pokeapi.co/api/v2/pokemon/?limit=1279')
+    axios.get('https://pokeapi.co/api/v2/pokemon/')
         .then( res => dispatch( getAllPokemons( res.data.results )))
         .finally(() => dispatch( setLoading('') ))
 }
