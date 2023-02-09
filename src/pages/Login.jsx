@@ -2,20 +2,30 @@ import '../styles/login.css';
 import buttonsvg from '../assets/buttonsvg.png';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAllPokemonsThunk } from '../store/slices/allPokemons';
+import { setLoading } from '../store/slices/loading';
 
 const Login = () => {
 
+    const dispatch = useDispatch();
     const navigate = useNavigate();
+    const [ scale, setScale ] = useState('');
     const [theName, setTheName] = useState('');
-    const [message, setMessage] = useState('')
-    const [ count, setCount ] = useState(0);
-    const [ letter, setLetter ] = useState('');
+    const loading = useSelector( state => state.loading );
+
+    const goPokemons = () => {
+        dispatch(setLoading('loading'))
+        setTimeout( () => dispatch( getAllPokemonsThunk() ),1000);
+        setTimeout( () => setScale( 'scale'), 1000);
+        setTimeout( () => navigate('/pokedex'), 2000 ) ;
+    }
 
     return (
         <div className='loginBox'>
-            <div className='loginBox-login'>
+            <div className={`loginBox-login ${ scale }`}>
                 <div className='shineLigth'>
-                    <div className='shineLigth-big'></div>
+                    <div className={`shineLigth-big ${loading}`}></div>
                     <div className='shineligth-small'>
                         <span></span>
                         <span></span>
@@ -38,10 +48,11 @@ const Login = () => {
                                 type="text"
                                 value={theName}
                                 onChange={e => setTheName(e.target.value)}
+                                autoFocus
                             />
                         </div>
                         <div className='button-box'>
-                            <button onClick={() => navigate('/pokedex')}> Go </button>
+                            <button onClick={ goPokemons }> Go </button>
                             <img src={buttonsvg} alt="" style={{ width: 90 }} />
                         </div>
                     </div>

@@ -7,5 +7,13 @@
     font-family: 'Press Start 2P', cursive;
 }
 
+body{
+    background-image: url('../assets/forest.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(15px);
+}
+
 
 
