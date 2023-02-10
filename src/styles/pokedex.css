@@ -15,9 +15,9 @@
     animation: showTop 0.5s 1;
 }
 
-/* .bxs-left-arrow {
-    font-size: 3rem;
-} */
+.bxs-left-arrow, .bx-x{
+    color: black;
+}
 
 @keyframes zoom {
     0%{
@@ -56,6 +56,7 @@ main {
     width: 375px;
     height: 100vh;
     background-color: brown;
+
 }
 
 .hide {
