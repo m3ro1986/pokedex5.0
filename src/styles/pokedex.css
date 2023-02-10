@@ -9,7 +9,7 @@
 .pokedex-box nav {
     background-color: brown;
     padding: 3rem;
-    animation: showTop 1s 1;
+    animation: showTop 0.5s 1;
 }
 
 @keyframes zoom {
@@ -42,6 +42,6 @@ main {
     flex-wrap: wrap;
     gap: 1rem;
     padding: 2rem 3rem;
-    animation: zoom 2s linear ;
+    animation: zoom 1s linear ;
 }
 
