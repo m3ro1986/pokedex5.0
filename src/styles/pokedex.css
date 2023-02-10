@@ -1,5 +1,5 @@
 .pokedex-box {
-
+    position: relative;
     height: 100vh;
     max-height: 100vh;
     max-width: 100%;
@@ -7,10 +7,17 @@
 }
 
 .pokedex-box nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: brown;
     padding: 3rem;
     animation: showTop 0.5s 1;
 }
+
+/* .bxs-left-arrow {
+    font-size: 3rem;
+} */
 
 @keyframes zoom {
     0%{
@@ -45,3 +52,22 @@ main {
     animation: zoom 1s linear ;
 }
 
+.sideBox {
+    width: 375px;
+    height: 100vh;
+    background-color: brown;
+}
+
+.hide {
+    position: absolute;
+    top: 0;
+    right: -375px;
+    transition: 0.5s;
+}
+
+.show {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 0.5s;
+}
