@@ -13,7 +13,7 @@ const Pokedex = () => {
     return (
         <div className='pokedex-box ligth'>
             <nav>
-                Pokedex welcome { userName }
+                <p> Welcome { userName }, here you can find your favorite POKEMON!!!</p>
             </nav>
             <main>
                 {
